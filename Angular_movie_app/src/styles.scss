@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import './config-scss/reset.scss';
+@import './config-scss/variables.scss';
+@import './config-scss/rem-calc.scss';
+
+@import '~@glidejs/glide/src/assets/sass/glide.core';
+@import '~@glidejs/glide/src/assets/sass/glide.theme';
+
+html {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--blackPage);
+}
+

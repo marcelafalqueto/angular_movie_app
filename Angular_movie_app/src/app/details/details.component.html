@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+
+<div class="container">
+  <div class="div-1">
+
+    <div class="text">
+      <h1>{{movie.original_title}}
+        <span>{{movie.release_date | date: 'YYYY'}}</span>
+      </h1>
+
+      <p>{{movie.overview}}</p>
+
+      <section class="paragraph2">
+        <h2>{{movie.title}}</h2>
+        <p>{{movie.overview}}</p>
+      </section>
+
+      <a routerLink="play"><button class="button">watch now</button></a>
+    </div>
+
+    <div class="image">
+      <img [src]="linkImg.concat(movie.poster_path)" alt="Picture">
+    </div>
+
+  </div>
+</div>
+

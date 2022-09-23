@@ -1,0 +1,27 @@
+<app-header></app-header>
+
+<form (input)="find($event)" >
+  <input type="text" placeholder="Type Here" (change)="find($event)">
+</form>
+
+  <p-carousel [value]="search" [numVisible]="1" [numScroll]="1" [circular]="false">
+    <ng-template let-product pTemplate="item">
+      <div>
+        <ng-template ngFor let-movie [ngForOf]="search">
+          <a routerLink="/details/{{movie.id}}">
+            <section>
+              <div>
+                <img [src]="linkImg.concat(movie.poster_path)" alt="Picture" (click)="getId(movie)">
+              </div>
+              <div class="informations">
+                <h3>{{movie.original_title}}</h3>
+                <p>Views: {{movie.popularity}}</p>
+                <p><img  id="star" src="assets/icons8-star.png" alt=""> {{movie.vote_average}}</p>
+              </div>
+            </section>
+          </a>
+        </ng-template>
+      </div>
+    </ng-template>
+  </p-carousel>
+

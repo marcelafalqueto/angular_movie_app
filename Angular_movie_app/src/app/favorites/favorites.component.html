@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<h2 *ngIf="favorites.length">Favorites movies</h2>
+
+<p-carousel [value]="favorites" [numVisible]="3" [numScroll]="3" [circular]="false">
+    <ng-template let-product pTemplate="item">
+        <div>
+            <div *ngFor="let favorite of favorites">
+                <section>
+                    <div>
+                        <img [src]="linkImg + favorite.poster_path" alt="Picture">    
+                    </div>
+                </section>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>

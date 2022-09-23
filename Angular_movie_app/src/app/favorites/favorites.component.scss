@@ -1,0 +1,41 @@
+@import '../../config-scss/rem-calc.scss';
+
+img {
+    height: 330px;
+  
+    &:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
+}
+
+div {
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+h2 {
+    margin-top: rem-calc(50);
+    margin-bottom: rem-calc(23);
+    margin-left: rem-calc(75);
+  
+    color: var(--white);
+    font-size: rem-calc(24);
+    
+    text-shadow: 0 0px 8px rgb(255 255 255 / 50%);
+}
+
+section {
+    margin: 40px 0;
+    display: flex;
+  
+    &:hover .informations {
+      width: 250px;
+      height: 330px;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      cursor: default;
+    }
+  }
